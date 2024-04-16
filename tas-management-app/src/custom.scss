@@ -1,0 +1,92 @@
+@use '@angular/material' as mat;
+
+$custom-primary-map: (
+    50 : #f8e9ed,
+    100 : #efc8d1,
+    200 : #d7929a,
+    300 : #c66a74,
+    400 : #cd4957,
+    500 : #cf3642,
+    600 : #c12e3f,
+    700 : #af2738,
+    800 : #a22132,
+    900 : #921a28,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+    )
+);
+
+$custom-accent-map: (
+    50 : #fae8da,
+    100 : #e1c7b9,
+    200 : #c3a493,
+    300 : #a4816d,
+    400 : #8e6650,
+    500 : #784d34,
+    600 : #6c442e,
+    700 : #5d3825,
+    800 : #4f2c1e,
+    900 : #3f1f14,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+    )
+);
+
+$custom-warn-map: (
+    50 : #ffebee,
+    100 : #ffced1,
+    200 : #f49c98,
+    300 : #ec7670,
+    400 : #f6574b,
+    500 : #cf3642,
+    600 : #ec3e2e,
+    700 : #da3428,
+    800 : #cd2c21,
+    900 : #be2013,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+    )
+);
+
+$primary-palette: mat.define-palette($custom-primary-map, 900);
+$accent-palette: mat.define-palette($custom-accent-map, 900);
+$warn-palette: mat.define-palette($custom-warn-map, 900);
+
+$custom-theme: mat.define-light-theme((
+ color: (
+   primary: $primary-palette,
+   accent: $accent-palette,
+   warn: $warn-palette,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($custom-theme);

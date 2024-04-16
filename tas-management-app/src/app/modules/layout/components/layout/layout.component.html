@@ -1,0 +1,16 @@
+<div class="flex flex-col h-screen">
+    <navbar (menuToggled)="toggle()"></navbar>
+    <mat-drawer-container >
+      <mat-drawer mode="side" [opened]="opened">
+        <menu-item [menu]="observableMenu"></menu-item>
+      </mat-drawer>
+  
+      <mat-drawer-content [class.margin-left]="opened">       
+        <router-outlet>
+  
+        </router-outlet>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
+  
+  <loading></loading>

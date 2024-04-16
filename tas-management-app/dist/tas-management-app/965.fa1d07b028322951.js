@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktas_management_app=self.webpackChunktas_management_app||[]).push([[965],{965:(e,n,t)=>{t.r(n),t.d(n,{LayoutModule:()=>o});var u=t(814),s=t(946);let o=(()=>{class a{static#t=this.\u0275fac=function(c){return new(c||a)};static#a=this.\u0275mod=s.oAB({type:a});static#n=this.\u0275inj=s.cJS({imports:[u.ez]})}return a})()}}]);

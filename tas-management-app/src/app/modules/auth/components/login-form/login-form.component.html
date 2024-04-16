@@ -1,0 +1,36 @@
+<loading></loading>
+<mat-card>
+    <mat-card-title>
+      
+    </mat-card-title>
+  <mat-card-content>
+    <form novalidate [formGroup]="form" (ngSubmit)="doLogin()">      
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="Email" formControlName="email" autocomplete="email" maxlength="50">
+          <mat-error *ngIf="form.controls.email.hasError('required')">
+            Este campo es obligatorio
+          </mat-error>
+          <mat-error *ngIf="form.controls.email.hasError('email')">
+            Ingrese un email válido
+          </mat-error> 
+        </mat-form-field>                
+
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Password" formControlName="password" autocomplete="password" maxlength="50">
+          <mat-error *ngIf="form.controls.password.hasError('required')">
+            Este campo es obligatorio
+          </mat-error>
+        </mat-form-field>
+
+      <span *ngIf="error" class="error">
+        {{ error }}
+      </span>
+
+      <div class="button">
+        <button type="submit" color="primary" mat-raised-button>Iniciar sesión</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,25 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.example-container {
+  width: 200px;
+  height: 500px;   
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+
+img.w-20.mr-8 {
+  width: 162px;
+}
+

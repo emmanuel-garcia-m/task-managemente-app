@@ -1,0 +1,33 @@
+<mat-expansion-panel  [ngClass]="completed ? 'green' : 'red'">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{ task.title }}
+        </mat-panel-title>
+        <mat-panel-description>
+            {{ task.description }}                     
+        </mat-panel-description>
+    </mat-expansion-panel-header>  
+    
+    <section class="example-section">
+        Fecha de vencimiento: {{ task.dueDate | date:'medium' }} 
+        <mat-checkbox [checked]="completed" [disabled]="completed" (change)="setAsComplete($event.checked)">Completada</mat-checkbox>        
+    </section>
+    
+    <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let note of task.notes">
+            <mat-icon matListItemIcon>check_circle</mat-icon>
+            {{ note }}
+        </mat-list-item>
+    </mat-list> 
+
+    <mat-action-row>
+        <button mat-button mat-flat-button extended color="primary" (click)="editTask()">
+            <mat-icon>create</mat-icon>
+            Editar
+          </button>
+          <button mat-button mat-flat-button color="accent" (click)="deleteTask()">
+            <mat-icon>delete</mat-icon>
+            Eliminar
+          </button> 
+      </mat-action-row>
+</mat-expansion-panel>

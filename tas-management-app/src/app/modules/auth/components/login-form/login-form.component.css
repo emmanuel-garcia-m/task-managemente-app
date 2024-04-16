@@ -1,0 +1,45 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+
+  .mat-mdc-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  mat-card-title,
+  mat-card-content {
+    display: grid;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  mat-card{
+    max-width: 332px;
+  }
+
+  .error {
+    padding: 16px;
+    width: 300px;
+    color: rgb(194, 4, 4);    
+  }
+
+  .button {    
+    margin: 8px 8px;
+  }
+
+  button.mdc-button{
+    width: 100%;
+  }
+
+  .errorText {
+    color: rgb(194, 4, 4);   
+    padding-bottom: 16px; 
+  }
+
+  img.w-20.mr-8 {
+    width: 162px;
+  }

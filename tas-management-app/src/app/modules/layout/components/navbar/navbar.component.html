@@ -1,0 +1,24 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" (click)="menuToggled.emit(true)" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>    
+    <span class="example-spacer"></span>
+    <span> {{ userName }}</span>
+    <button color="accent"  mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with account_circle" [matMenuTriggerFor]="menu" matTooltip="Ver perfil">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <span>Ver perfil</span>
+        </button>
+        <button mat-menu-item>
+            <span>Cambiar contraseña</span>
+          </button>
+      </mat-menu>
+    <button color="accent" mat-icon-button (click)="logout()" class="example-icon" aria-label="Example icon-button with home">
+        <mat-icon matTooltip="Cerrar sesión">power_settings_new</mat-icon>
+    </button>
+ </mat-toolbar>
+
+
+
